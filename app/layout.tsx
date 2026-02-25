@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Plus_Jakarta_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const _plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin", "latin-ext"] });
 
 export const metadata: Metadata = {
   title: 'SMART ELEKTRIK - Електромонтажні послуги',
