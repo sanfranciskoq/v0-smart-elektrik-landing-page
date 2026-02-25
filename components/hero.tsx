@@ -17,7 +17,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-background py-20 sm:py-32">
+    <section className="relative overflow-hidden py-20 sm:py-32">
       {/* Background accent */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute top-0 right-0 w-96 h-96 bg-secondary opacity-10 rounded-full blur-3xl" />

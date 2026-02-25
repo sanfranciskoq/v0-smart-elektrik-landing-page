@@ -13,7 +13,7 @@ const reviews = [
 
 export function ReviewsSection() {
     return (
-        <section id="reviews" className="py-24 relative overflow-hidden bg-background">
+        <section id="reviews" className="py-24 relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
                 <div className="absolute top-1/4 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px]" />

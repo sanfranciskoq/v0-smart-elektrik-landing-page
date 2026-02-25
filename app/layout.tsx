@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Plus_Jakarta_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ThemeProvider } from '@/components/theme-provider'
+import { AtmosphericBackground } from '@/components/atmospheric-background'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -51,6 +52,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <AtmosphericBackground />
           {children}
           <Analytics />
           <SpeedInsights />
