@@ -3,6 +3,7 @@ import { Hero } from '@/components/hero'
 import { ProjectsCarousel } from '@/components/projects-carousel'
 import { ExpertSection } from '@/components/expert-section'
 import { ServiceCalculator } from '@/components/service-calculator'
+import { ReviewsSection } from '@/components/reviews-section'
 import { Footer } from '@/components/footer'
 
 export default function Page() {
@@ -14,6 +15,7 @@ export default function Page() {
         <ProjectsCarousel />
         <ExpertSection />
         <ServiceCalculator />
+        <ReviewsSection />
       </main>
       <Footer />
     </div>
