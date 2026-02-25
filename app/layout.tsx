@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { AtmosphericBackground } from '@/components/atmospheric-background'
+import { CursorGlow } from '@/components/cursor-glow'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -52,8 +53,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AtmosphericBackground />
-          {children}
+          <div className="relative min-h-screen">
+            <AtmosphericBackground />
+            <CursorGlow />
+
+            {/* Content layer */}
+            <div className="relative z-10">
+              {children}
+            </div>
+          </div>
           <Analytics />
           <SpeedInsights />
         </ThemeProvider>

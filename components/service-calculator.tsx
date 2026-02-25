@@ -393,16 +393,14 @@ function ServiceRow({
 
   return (
     <div
-      className={`flex items-center justify-between gap-3 px-5 py-3 transition-colors ${
-        isActive ? 'bg-primary/5' : 'hover:bg-muted/30'
-      }`}
+      className={`flex items-center justify-between gap-3 px-5 py-3 transition-colors ${isActive ? 'bg-primary/5' : 'hover:bg-muted/30'
+        }`}
     >
       {/* Service info */}
       <div className="flex-1 min-w-0">
         <p
-          className={`text-sm leading-tight ${
-            isActive ? 'text-foreground font-medium' : 'text-foreground'
-          }`}
+          className={`text-sm leading-tight ${isActive ? 'text-foreground font-medium' : 'text-foreground'
+            }`}
         >
           {item.name}
         </p>
