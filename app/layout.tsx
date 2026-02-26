@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   title: 'SMART ELEKTRIK — Електромонтаж та Розумний Будинок | Київ',
   description: 'Професійні електромонтажні роботи та консультації в Україні.',
   icons: {
-    icon: 'https://smart-elektrik-landing-page.vercel.app/logo-smart-v1.ico?v=4',
-    shortcut: 'https://smart-elektrik-landing-page.vercel.app/logo-smart-v1.ico?v=4',
-    apple: 'https://smart-elektrik-landing-page.vercel.app/logo-smart-v1.ico?v=4',
+    icon: '/icon.ico?v=5',
+    shortcut: '/favicon.ico?v=5',
+    apple: '/apple-icon.ico?v=5',
   },
 }
 
@@ -36,9 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="https://smart-elektrik-landing-page.vercel.app/logo-smart-v1.ico?v=4" type="image/x-icon" />
-      </head>
+      <head />
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"
