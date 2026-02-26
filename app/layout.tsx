@@ -39,6 +39,8 @@ export const viewport: Viewport = {
   userScalable: true,
 }
 
+import { Toaster } from '@/components/ui/toaster'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -64,6 +66,7 @@ export default function RootLayout({
           </div>
           <Analytics />
           <SpeedInsights />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

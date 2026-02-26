@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { serviceModules, type ServiceItem } from '@/lib/services-data'
+import { LeadModal } from '@/components/lead-modal'
 import {
   Cable,
   CircleDot,
@@ -242,22 +243,23 @@ export function ServiceCalculator() {
 
                   <AnimatePresence>
                     {total > 0 && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                      >
-                        <Button
-                          size="lg"
-                          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-                          asChild
-                        >
-                          <a href="tel:+380636311132">
-                            <Phone className="size-4" />
-                            {'Отримати консультацію від Дмитра'}
-                          </a>
-                        </Button>
-                      </motion.div>
+                      <LeadModal
+                        title="Отримати кошторис"
+                        description="Надішліть вашу заявку, і Дмитро зателефонує вам для детального обговорення кошторису."
+                        metadata={{
+                          totalPrice: total,
+                          items: selectedItems.map(i => ({ name: i.name, qty: i.quantity }))
+                        }}
+                        trigger={
+                          <Button
+                            size="lg"
+                            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold h-12 shadow-lg shadow-primary/20 transition-all hover:scale-[1.02]"
+                          >
+                            <Phone className="size-4 mr-2" />
+                            Отримати консультацію від Дмитра
+                          </Button>
+                        }
+                      />
                     )}
                   </AnimatePresence>
                 </div>
@@ -354,16 +356,23 @@ export function ServiceCalculator() {
                       {total.toLocaleString('uk-UA')} грн
                     </span>
                   </div>
-                  <Button
-                    size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-                    asChild
-                  >
-                    <a href="tel:+380636311132">
-                      <Phone className="size-4" />
-                      {'Отримати консультацію від Дмитра'}
-                    </a>
-                  </Button>
+                  <LeadModal
+                    title="Отримати кошторис"
+                    description="Надішліть вашу заявку, і Дмитро зателефонує вам для детального обговорення кошторису."
+                    metadata={{
+                      totalPrice: total,
+                      items: selectedItems.map(i => ({ name: i.name, qty: i.quantity }))
+                    }}
+                    trigger={
+                      <Button
+                        size="lg"
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold h-12 shadow-lg shadow-primary/20 transition-all hover:scale-[1.02]"
+                      >
+                        <Phone className="size-4 mr-2" />
+                        Отримати консультацію від Дмитра
+                      </Button>
+                    }
+                  />
                 </div>
               </motion.div>
             </>

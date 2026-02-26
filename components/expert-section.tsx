@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import { FileText, Award, Briefcase, Phone } from 'lucide-react'
+import { LeadModal } from '@/components/lead-modal'
 
 const badges = [
   {
@@ -97,7 +97,6 @@ export function ExpertSection() {
           ))}
         </motion.div>
 
-        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -105,16 +104,7 @@ export function ExpertSection() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-12 text-center"
         >
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-base px-8 shadow-[0_0_24px_rgba(255,122,0,0.25)] hover:shadow-[0_0_32px_rgba(255,122,0,0.35)] transition-shadow"
-            asChild
-          >
-            <a href="tel:+380636311132">
-              <Phone className="size-4" />
-              {'Безкоштовна консультація'}
-            </a>
-          </Button>
+          <LeadModal />
         </motion.div>
       </div>
     </section>

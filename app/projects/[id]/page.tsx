@@ -8,6 +8,7 @@ import { ChevronLeft, Phone } from 'lucide-react'
 import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
+import { LeadModal } from '@/components/lead-modal'
 
 export default function ProjectPage() {
     const { id } = useParams()
@@ -142,16 +143,20 @@ export default function ProjectPage() {
                         <p className="text-xl text-slate-400 mb-10 text-balance">
                             Хочете такий самий результат? Отримайте безкоштовну консультацію від фахівця вже сьогодні.
                         </p>
-                        <Button
-                            size="lg"
-                            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-xl px-12 h-16 shadow-[0_0_25px_rgba(255,122,0,0.3)] transition-all hover:scale-105"
-                            asChild
-                        >
-                            <a href="tel:+380636311132">
-                                <Phone className="size-5 mr-3" />
-                                <span>Отримати консультацію</span>
-                            </a>
-                        </Button>
+                        <LeadModal
+                            title="Бажаєте такий же результат?"
+                            description="Залиште заявку, і Дмитро зателефонує вам для безкоштовної консультації по вашому проєкту."
+                            metadata={{ project: project.title }}
+                            trigger={
+                                <Button
+                                    size="lg"
+                                    className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-xl px-12 h-16 shadow-[0_0_25px_rgba(255,122,0,0.3)] transition-all hover:scale-105"
+                                >
+                                    <Phone className="size-5 mr-3" />
+                                    <span>Отримати консультацію</span>
+                                </Button>
+                            }
+                        />
                     </div>
                 </section>
             </main>
