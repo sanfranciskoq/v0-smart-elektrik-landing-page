@@ -12,6 +12,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 const _plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin", "latin-ext"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://smart-elektrik-landing-page.vercel.app/'),
   title: 'SMART ELEKTRIK — Електромонтаж та Розумний Будинок | Київ',
   description: 'Професійні електромонтажні роботи та консультації в Україні. Розраховуйте вартість послуг онлайн.',
   icons: {
