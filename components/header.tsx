@@ -1,9 +1,8 @@
 'use client'
 
-import { useTheme } from 'next-themes'
-import { Moon, Sun, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const navLinks = [
   { label: 'Головна', href: '/' },
@@ -13,17 +12,7 @@ const navLinks = [
 ]
 
 export function Header() {
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-  }
 
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -53,23 +42,6 @@ export function Header() {
 
         {/* Right actions */}
         <div className="flex items-center gap-2">
-          {mounted && (
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleTheme}
-              className="rounded-full"
-            >
-              {theme === 'dark' ? (
-                <Sun className="h-5 w-5 text-secondary" />
-              ) : (
-                <Moon className="h-5 w-5 text-foreground" />
-              )}
-              <span className="sr-only">
-                {theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-              </span>
-            </Button>
-          )}
 
           <Button
             variant="ghost"
