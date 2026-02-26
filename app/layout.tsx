@@ -12,14 +12,15 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 const _plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin", "latin-ext"] });
 
 export const metadata: Metadata = {
-  title: 'SMART ELEKTRIK - Електромонтажні послуги',
-  description: 'Професійні електромонтажні роботи та консультації в Україні. Розраховуйте вартість послуг онлайн.',
+  title: 'SMART ELEKTRIK — Електромонтаж та Розумний Будинок | Київ',
+  description: 'Професійні електромонтажні послуги від Поліщука Дмитра.',
   icons: {
     icon: [
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/icon.svg', sizes: '32x32', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/icon.svg', sizes: '180x180', type: 'image/svg+xml' },
     ],
   },
 }
