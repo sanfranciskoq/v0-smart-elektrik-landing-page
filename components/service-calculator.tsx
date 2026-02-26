@@ -117,7 +117,7 @@ export function ServiceCalculator() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex-1 min-w-0"
           >
-            <Accordion type="multiple" defaultValue={['wiring']} className="space-y-3">
+            <Accordion type="multiple" className="space-y-3">
               {serviceModules.map((mod) => (
                 <AccordionItem
                   key={mod.id}
