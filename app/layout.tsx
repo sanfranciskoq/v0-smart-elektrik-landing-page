@@ -14,23 +14,13 @@ const _plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin", "latin-ext"] });
 export const metadata: Metadata = {
   title: 'SMART ELEKTRIK - Електромонтажні послуги',
   description: 'Професійні електромонтажні роботи та консультації в Україні. Розраховуйте вартість послуг онлайн.',
-  generator: 'v0.app',
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
       {
         url: '/icon.svg',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
   },
 }
 
