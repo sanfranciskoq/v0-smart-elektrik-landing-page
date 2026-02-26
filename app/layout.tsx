@@ -35,6 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.png?v=2" type="image/png" />
+      </head>
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"
