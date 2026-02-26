@@ -139,9 +139,9 @@ export function ProjectsCarousel() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex-none w-[320px] sm:w-[400px] snap-center"
               >
-                <div className="group relative rounded-2xl overflow-hidden border border-border glass">
-                  {/* Image */}
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="group flex flex-col transition-all duration-300 hover:-translate-y-1">
+                  {/* Image Container */}
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
                     <Image
                       src={project.image}
                       alt={`${project.title} — ${project.caption}`}
@@ -149,16 +149,14 @@ export function ProjectsCarousel() {
                       sizes="(max-width: 640px) 320px, 400px"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    {/* Overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
                   </div>
 
-                  {/* Caption */}
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <h3 className="text-lg font-bold text-background">
+                  {/* Text Container Below Image */}
+                  <div className="pt-4 px-1">
+                    <h3 className="text-lg font-bold text-white transition-colors duration-300 group-hover:text-[#FF8C00]">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-background/80 mt-0.5">
+                    <p className="text-sm text-slate-400 mt-1">
                       {project.caption}
                     </p>
                   </div>
