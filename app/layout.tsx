@@ -12,11 +12,13 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 const _plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin", "latin-ext"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://smart-elektrik.vercel.app'), // Replacing with a production-ready fallback, or keep localhost if dev only
   title: 'SMART ELEKTRIK — Електромонтаж та Розумний Будинок | Київ',
   description: 'Професійні електромонтажні послуги від Поліщука Дмитра.',
   icons: {
-    icon: '/icon.svg',
-    apple: '/icon.svg',
+    icon: '/logo-se.svg',
+    shortcut: '/logo-se.svg',
+    apple: '/logo-se.svg',
   },
 }
 
