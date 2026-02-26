@@ -40,7 +40,7 @@
 ## Project Structure
 
 ```
-/vercel/share/v0-project/
+/project-root/
 ├── app/
 │   ├── layout.tsx              # Root layout with ThemeProvider
 │   ├── page.tsx                # Main landing page
