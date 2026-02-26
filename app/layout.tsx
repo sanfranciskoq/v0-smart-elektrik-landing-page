@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   title: 'SMART ELEKTRIK — Електромонтаж та Розумний Будинок | Київ',
   description: 'Професійні електромонтажні роботи та консультації в Україні. Розраховуйте вартість послуг онлайн.',
   icons: {
-    icon: '/favicon.png?v=2',
-    shortcut: '/favicon.png?v=2',
-    apple: '/favicon.png?v=2',
+    icon: '/logo-smart-v1.png?v=1',
+    shortcut: '/logo-smart-v1.png?v=1',
+    apple: '/logo-smart-v1.png?v=1',
   },
 }
 
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="uk" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.png?v=2" type="image/png" />
+        <link rel="icon" href="/logo-smart-v1.png?v=1" type="image/png" />
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider
