@@ -5,39 +5,8 @@ import { motion, useMotionValue, useAnimationControls } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import Image from 'next/image'
-
-const projects = [
-  {
-    id: 1,
-    image: '/images/project-1.jpg',
-    title: 'ЖК RiverStone',
-    caption: 'Повний електромонтаж квартири',
-  },
-  {
-    id: 2,
-    image: '/images/project-2.jpg',
-    title: 'Котедж в Ірпені',
-    caption: 'Розумний будинок',
-  },
-  {
-    id: 3,
-    image: '/images/project-3.jpg',
-    title: 'ЖК Новопечерський Двір',
-    caption: 'Дизайнерське освітлення',
-  },
-  {
-    id: 4,
-    image: '/images/project-4.jpg',
-    title: 'Офіс IT-компанії',
-    caption: 'Комерційний електромонтаж',
-  },
-  {
-    id: 5,
-    image: '/images/project-5.jpg',
-    title: 'Приватний будинок',
-    caption: 'Зовнішнє освітлення ділянки',
-  },
-]
+import { projects } from '@/lib/projects-data'
+import Link from 'next/link'
 
 const CARD_WIDTH = 400
 const CARD_GAP = 24
@@ -139,28 +108,30 @@ export function ProjectsCarousel() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex-none w-[320px] sm:w-[400px] snap-center"
               >
-                <div className="group flex flex-col transition-all duration-300 hover:-translate-y-1">
-                  {/* Image Container */}
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
-                    <Image
-                      src={project.image}
-                      alt={`${project.title} — ${project.caption}`}
-                      fill
-                      sizes="(max-width: 640px) 320px, 400px"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
+                <Link href={`/projects/${project.id}`} className="block">
+                  <div className="group flex flex-col transition-all duration-300 hover:-translate-y-1">
+                    {/* Image Container */}
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10">
+                      <Image
+                        src={project.image}
+                        alt={`${project.title} — ${project.subtitle}`}
+                        fill
+                        sizes="(max-width: 640px) 320px, 400px"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
 
-                  {/* Text Container Below Image */}
-                  <div className="pt-4 px-1">
-                    <h3 className="text-lg font-bold text-white transition-colors duration-300 group-hover:text-[#FF8C00]">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-slate-400 mt-1">
-                      {project.caption}
-                    </p>
+                    {/* Text Container Below Image */}
+                    <div className="pt-4 px-1">
+                      <h3 className="text-lg font-bold text-white transition-colors duration-300 group-hover:text-[#FF8C00]">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-slate-400 mt-1">
+                        {project.subtitle}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>
