@@ -6,10 +6,10 @@ import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
 
 const navLinks = [
-  { label: 'Головна', href: '#' },
-  { label: 'Проєкти', href: '#projects' },
-  { label: 'Експерт', href: '#expert' },
-  { label: 'Калькулятор', href: '#calculator' },
+  { label: 'Головна', href: '/' },
+  { label: 'Проєкти', href: '/#projects' },
+  { label: 'Експерт', href: '/#expert' },
+  { label: 'Калькулятор', href: '/#calculator' },
 ]
 
 export function Header() {
@@ -29,7 +29,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 shrink-0">
+        <a href="/" className="flex items-center gap-2 shrink-0">
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-lg">SE</span>
           </div>

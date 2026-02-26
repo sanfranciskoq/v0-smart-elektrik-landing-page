@@ -49,7 +49,7 @@ export function ProjectsCarousel() {
   }
 
   return (
-    <section id="projects" className="py-16 sm:py-24 overflow-hidden">
+    <section id="projects" className="py-16 sm:py-24 overflow-hidden scroll-mt-[100px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div

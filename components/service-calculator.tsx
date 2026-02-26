@@ -86,7 +86,7 @@ export function ServiceCalculator() {
   const itemCount = selectedItems.length
 
   return (
-    <section id="calculator" className="py-16 sm:py-24">
+    <section id="calculator" className="py-16 sm:py-24 scroll-mt-[100px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
