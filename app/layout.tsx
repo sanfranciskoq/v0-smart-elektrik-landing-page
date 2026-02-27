@@ -31,14 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico?t=1710000000" sizes="any" />
-        <link rel="icon" href="/favicon-32x32.png?t=1710000000" type="image/png" sizes="32x32" />
-        <link rel="icon" href="/favicon-16x16.png?t=1710000000" type="image/png" sizes="16x16" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png?t=1710000000" />
-        <link rel="manifest" href="/site.webmanifest?t=1710000000" />
-        <meta name="theme-color" content="#FF8C00" />
-      </head>
+      <head />
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"
