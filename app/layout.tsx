@@ -14,17 +14,7 @@ const _plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin", "latin-ext"] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://smart-elektrik-landing-page.vercel.app'),
   title: 'SMART ELEKTRIK — Електромонтаж та Розумний Будинок | Київ',
-  icons: {
-    icon: [
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon.ico' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-  },
-  manifest: '/site.webmanifest',
+  description: 'Професійні електромонтажні роботи та консультації в Україні.',
 }
 
 export const viewport: Viewport = {
@@ -42,10 +32,12 @@ export default function RootLayout({
   return (
     <html lang="uk" suppressHydrationWarning>
       <head>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" href="/favicon.ico?t=1710000000" sizes="any" />
+        <link rel="icon" href="/favicon-32x32.png?t=1710000000" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon-16x16.png?t=1710000000" type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?t=1710000000" />
+        <link rel="manifest" href="/site.webmanifest?t=1710000000" />
+        <meta name="theme-color" content="#FF8C00" />
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider
