@@ -3,12 +3,12 @@
 import { motion } from 'framer-motion'
 
 const reviews = [
-    { id: 1, src: '/images/review1.png', large: true },
-    { id: 2, src: '/images/review2.png', large: false },
-    { id: 3, src: '/images/review3.png', large: false },
-    { id: 4, src: '/images/review4.png', large: false },
-    { id: 5, src: '/images/review5.png', large: false },
-    { id: 6, src: '/images/review6.png', large: true },
+    { id: 1, src: '/review1.png', large: true },
+    { id: 2, src: '/review2.png', large: false },
+    { id: 3, src: '/review3.png', large: false },
+    { id: 4, src: '/review4.png', large: false },
+    { id: 5, src: '/review5.png', large: false },
+    { id: 6, src: '/review6.png', large: true },
 ]
 
 export function ReviewsSection() {
