@@ -36,20 +36,21 @@ export function Hero() {
       {/* Background Image with Parallax and Blur */}
       <motion.div
         style={{ y }}
-        className="absolute inset-0 z-[-2] scale-110"
+        className="absolute inset-0 z-[-2] scale-105 overflow-hidden"
       >
         <Image
           src="/images/download.png"
           alt="Електромонтажні роботи"
           fill
           priority
-          className="object-cover blur-[4px]"
+          quality={90}
+          className="object-cover blur-sm brightness-[0.7]"
         />
       </motion.div>
 
-      {/* Dark Overlay Gradient */}
+      {/* Dark Overlay Gradient - Softened for visibility */}
       <div
-        className="absolute inset-0 z-[-1] bg-gradient-to-b from-slate-950/90 via-slate-950/70 to-slate-950"
+        className="absolute inset-0 z-[-1] bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950"
         aria-hidden="true"
       />
 
